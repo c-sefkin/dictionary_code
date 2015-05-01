@@ -22,10 +22,10 @@ describe(Word) do
     end
   end
 
-  describe('#defs') do
+  describe('#define') do
     it("initially returns an empty array of definitions for the word") do
       test_word = Word.new("Awesome")
-      expect(test_word.defs()).to(eq([]))
+      expect(test_word.define()).to(eq([]))
     end
   end
 
@@ -66,7 +66,7 @@ describe(Word) do
       test_word = Word.new("Awesome")
       test_definition = Definition.new("to be cool and amazing")
       test_word.add_definition(test_definition)
-      expect(test_word.defs()).to(eq([test_definition]))
+      expect(test_word.define()).to(eq([test_definition]))
     end
   end
 end
