@@ -21,6 +21,13 @@ describe(Word) do
     end
   end
 
+  describe('#defs') do
+    it("initially returns an empty array of definitions for the word") do
+      test_word = Word.new("Awesome")
+      expect(test_word.defs()).to(eq([]))
+    end
+  end
+
   describe('.clear') do
     it("empties out all of the saved words") do
       Word.new("Awesome").save()

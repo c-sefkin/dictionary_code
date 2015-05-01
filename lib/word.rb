@@ -26,6 +26,9 @@ class Word
   define_method(:id) do
     @id
   end
-  
+
+  define_method(:defs) do
+    @defs
+  end
 
 end
