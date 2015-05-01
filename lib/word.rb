@@ -4,7 +4,7 @@ class Word
   define_method(:initialize) do |name|
     @name = name
     @id = @@words.length().+(1)
-    @defs = []
+    @define = []
   end
 
   define_method(:name) do
@@ -27,8 +27,8 @@ class Word
     @id
   end
 
-  define_method(:defs) do
-    @defs
+  define_method(:define) do
+    @define
   end
 
   define_singleton_method(:find) do |id|
@@ -42,7 +42,7 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @defs.push(definition)
+    @define.push(definition)
   end
 
 

@@ -1,3 +1,12 @@
-<Welcome to the Definition Saver</h1>
-  <a href="/definitions">See Definition List</a>
-  <a href="/definitions/new">Add New Definitions</a>
+<Welcome to the Dictionary Central</h1>
+
+  <h1>Words</h1>
+  <ul>
+    <% @words.each() do |word| %>
+    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
+    <% end %>
+  </ul>
+
+
+  <a href="/words/new">Add New Words</a>
+  
