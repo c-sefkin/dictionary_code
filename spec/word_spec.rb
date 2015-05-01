@@ -14,6 +14,13 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it("returns the id of the word") do
+      test_word = Word.new("Awesome")
+      expect(test_word.id()).to(eq(1))
+    end
+  end
+
   describe('.clear') do
     it("empties out all of the saved words") do
       Word.new("Awesome").save()

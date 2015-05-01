@@ -23,4 +23,9 @@ class Word
     @@words.push(self)
   end
 
+  define_method(:id) do
+    @id
+  end
+  
+
 end
