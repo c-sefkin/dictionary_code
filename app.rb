@@ -32,7 +32,7 @@ post('/words') do
   name = params.fetch("name")
   Word.new(name).save()
   @words = Word.all()
-  erb(:success)
+  erb(:word_success)
 end
 
 get('/definitions/:id') do
